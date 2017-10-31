@@ -1,0 +1,52 @@
+<section >
+  	<div *ngIf="showThankyou"><span class="thankyou">Thank you for your feedback</span><span class="error delete" (click)="hideThankyou()" >x</span></div>
+  <section>
+    <form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
+      <div>
+        <label for="name">Name: </label>
+        <input type="text" #Name="ngModel" [(ngModel)]="postData.Name"
+    name="Name" required>
+    	<span class="error" *ngIf="Name.invalid && isSubmitted">Name is required!</span>
+      </div>
+      <div>
+        <label for="weight">Email: </label>
+        <input type="email" #Email="ngModel" [(ngModel)]="postData.Email"
+    name="Email" required>
+    	<span class="error" *ngIf="Email.invalid && isSubmitted">Email is required!</span>
+      </div>
+      <div>
+        <label for="height">Age: </label>
+        <input type="number" #Age="ngModel" [(ngModel)]="postData.Age"
+    name="Age" max=99 min=1>
+      </div>
+      <div>
+        <label for="height">Gender: </label>
+
+        <select placeholder="Gender" [(ngModel)]="postData.Gender" name="Gender">
+		  <option  value="Male"> Male </option>
+		  <option value="Female"> Female </option>
+		</select>
+      </div>
+      <div>
+        <label for="height">Country: </label>
+        <input type="text" #Country="ngModel" [(ngModel)]="postData.Country"
+    name="Country">
+      </div>
+      <div>
+        <label for="height">Experience Rating: </label>
+        <input type="number" #Experience="ngModel" [(ngModel)]="postData.Experience"
+    name="Experience" max=5 min=1>
+      </div>
+       <div>
+        <label for="height">Suggested improvements: </label>
+        <textarea placeholder="Description" [(ngModel)]="postData.Suggestions" name="Suggestions"></textarea>
+      </div>
+
+      <div>
+      	<button type="submit" value="Save" class="savebtn" >Save</button>
+      </div>
+    </form>
+  </section>
+
+  
+<section>

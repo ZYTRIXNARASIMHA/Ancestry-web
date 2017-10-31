@@ -1,0 +1,7 @@
+.mainContent{
+    width: calc(100% - 305px);
+    position: relative;
+    top: 58px;
+    left: 250px;
+    padding: 5px;
+}

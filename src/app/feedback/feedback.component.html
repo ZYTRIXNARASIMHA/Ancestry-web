@@ -1,0 +1,31 @@
+<div class="productList">
+<table>
+  <thead>
+    <tr>
+      <th>S.no.</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>Country</th>
+      <th>Experience</th>
+      <th>Suggested Improvements</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let each of records; let i=index">
+      <td>{{i+1}}</td>
+      <td>{{each.Name}}</td>
+      <td>{{each.Email}}</td>
+      <td>{{each.Age}}</td>
+      <td>{{each.Gender}}</td>
+      <td>{{each.Country}}</td>
+      <td>{{each.Experience}}</td>
+      <td >{{each.Suggestions}}</td>
+      <td>
+       <span class="error delete" (click)="deleteRow(each.id,i)" alt="Delete">X</span></td>
+    </tr>
+  </tbody>
+</table>
+</div>

@@ -1,0 +1,17 @@
+.header{
+    width: 100%;
+   float: left;
+    border-bottom: 1px solid #eaf1f3;
+    max-height: 58px;
+    overflow: hidden;
+    position: fixed;
+    background: #fff;
+    z-index: 99;
+    top: 0;
+    font-family: 'proxima-regular' !important;
+}
+.header span .simpleIcons{
+    font-size: 13px;
+    color: rgba(49, 52, 52, 0.8);
+    font-style: normal;
+}

@@ -1,0 +1,7 @@
+<div class="sideBar">
+	<ul>
+		<li *ngFor="let list of lists; let i=index">
+			<a routerLink="{{list.link}}"><span class="sparityIcons">{{list.icon}}</span> {{list.name}}</a>
+		</li>
+	</ul>
+</div>
